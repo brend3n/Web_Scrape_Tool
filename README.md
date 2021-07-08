@@ -4,8 +4,8 @@ A simple tool to faciliate web scraping with `bs4`
 
 To use,
 
+NEED TO FIX
 Installation:
-
 
   `pip install web-scrape-tool`
 
