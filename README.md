@@ -6,7 +6,8 @@ To use,
 
 Installation:
 
-  `pip3 install web_scrape_tool`
+
+  `pip install web-scrape-tool`
 
 Code:
 
