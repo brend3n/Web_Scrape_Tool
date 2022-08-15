@@ -31,8 +31,14 @@ def get_random_ua(ua_list):
 
 # Returns the soup of the HTML content
 def get_soup_adv(url, ua_list=ua_list):
+    soup = None
     headers = {'User-Agent': get_random_ua(ua_list)}
     page = requests.get(url, headers=headers, verify=False)
+
+    if page.status_code != 200:
+        print(f"Bad status code from get_soup_adv GET request: {page.status_code}")
+        return None# Bad responses
+
     soup = BeautifulSoup(page.content, 'html.parser')
     return soup
 
