@@ -62,15 +62,6 @@ def get_cloud_soup_adv(url, ua_list=ua_list):
 
     soup = BeautifulSoup(page.content, 'html.parser')
     return soup
-
-# Assuming get_soup_adv is now an asynchronous function using aiohttp
-async def async_get_soup_adv(url: str):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
-            html = await response.text()
-            # You need to adapt the parsing part to be compatible with asyncio
-            # This might involve using libraries like beautifulsoup4 as before, but without blocking calls
-            return BeautifulSoup(html, 'html.parser')
         
 # if __name__== "__main__":
     ua_link = "http://www.webapps-online.com/online-tools/user-agent-strings/dv/plugin55210/chromium"
