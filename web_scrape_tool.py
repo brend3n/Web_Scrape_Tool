@@ -30,7 +30,7 @@ def get_user_agents(ua_link):
 ua_list = get_user_agents(ua_link)
 
 # Returns a random user agent from the list of user agents
-def get_random_ua(ua_list):
+def get_random_ua(ua_list=ua_list):
     return random.choice(ua_list)
 
 # Returns the soup of the HTML content
